@@ -44,7 +44,32 @@ a {
   margin: 0 auto;
 }
 /* ---------- HEADER --------------*/
+.close-black {
+  position: absolute;
+  right: 8px;
+  top: 8px;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  padding: 6px;
+  display: flex;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  fill: rgba(0, 0, 0, 1);
+}
 .img {
+  display: block;
+}
+.is-active {
+  position: relative;
+}
+.is-active::after {
+  content: '';
+  position: absolute;
+  background: rgba(33, 150, 243, 1);
+  border-radius: 2px;
+  width: 100%;
+  height: 4px;
+  top: 48px;
   display: block;
 }
 .header {
@@ -115,6 +140,59 @@ a {
 }
 /* -----------END HEADER --------- */
 /* ---------- MAIN --------------*/
+.modal {
+  top: 50%;
+  left: 50%;
+  width: 528px;
+  height: 581px;
+  background-color: var(--focus-color);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  position: fixed;
+  z-index: 1;
+  transition-property: visibility, opacity, transform;
+  transition-duration: 2s;
+  transform: translateX(-50%) translateY(-50%) scale(1);
+  opacity: 1;
+  visibility: visible;
+  display: block;
+}
+.is-hidden {
+  pointer-events: none;
+  visibility: hidden;
+  opacity: 0;
+}
+.backdrop {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.2);
+}
+.item {
+  position: relative;
+}
+.aplication {
+  position: relative;
+  margin: 10px;
+  overflow: hidden;
+  background-color: #fff;
+  justify-content: center;
+  text-align: center;
+}
+.aplication > .aplication-text {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin: 0;
+  width: 100%;
+  height: 70px;
+  padding: 27px;
+  background-color: rgba(47, 48, 58, 0.8);
+  color: #fff;
+}
 .social-list {
   display: flex;
   gap: 10px;
@@ -354,6 +432,34 @@ a {
   color: var(--navigation-color);
   display: block;
   margin: 0 24px 20px 24px;
+}
+.overlay-box {
+  position: relative;
+  overflow: hidden;
+  width: 370px;
+  height: 294px;
+}
+.overlay {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: rgba(33, 150, 243, 0.9);
+  transform: translateY(100%);
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.overlay-box:hover .overlay,
+.overlay-box:focus .overlay {
+  transform: translateY(0);
+}
+.overlay p {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.55;
+  letter-spacing: 0.03em;
+  color: var(--focus-color);
+  padding: 49px 45px 49px 24px;
 }
 /* ---------- END-PORTFOLIO --------------*/
 /* ---------- FOOTER --------------*/

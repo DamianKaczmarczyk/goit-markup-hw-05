@@ -28,7 +28,9 @@
           <a class="logo link" href="index.html">Web<span class="logo-color">Studio</span></a>
           <ul class="menu">
             <li class="navigation-list">
-              <a class="navigation-list-link link" href="./index.html">Agencja</a>
+              <div class="is-active">
+                <a class="navigation-list-link link" href="./index.html">Agencja</a>
+              </div>
             </li>
             <li class="navigation-list">
               <a class="navigation-list-link link" href="./portfolio.html">Portfolio</a>
@@ -59,7 +61,20 @@
       <section class="section business-solutions">
         <div class="container business-solutions-container">
           <h1 class="hero-item-text">EFEKTYWNE ROZWIĄZANIA DLA WASZEGO BIZNESU</h1>
-          <button class="business-solutions-button" type="button">Zamów usługę</button>
+          <button type="button" class="business-solutions-button" data-modal-open>
+            Zamów usługę
+          </button>
+        </div>
+        <div class="backdrop is-hidden" data-modal>
+          <div class="modal">
+            <button class="btn-close" data-modal-close>
+              <div class="close-black">
+                <svg width="18" height="18">
+                  <use href="./images/icons.svg#icon-close-black"></use>
+                </svg>
+              </div>
+            </button>
+          </div>
         </div>
       </section>
       <section class="section section-lorem">
@@ -121,33 +136,42 @@
         <div class="container">
           <h2 class="secondary-undertitle">Czym się zajmujemy</h2>
           <ul class="about-img-list">
-            <li class="abaut-img-list-item">
-              <img
-                class="abaut-img-list-img"
-                src="./images/1.jpg"
-                alt="computer"
-                width="370"
-                height="294"
-              />
-            </li>
-            <li class="abaut-img-list-item">
-              <img
-                class="abaut-img-list-img"
-                src="./images/2.jpg"
-                alt="mobilephone"
-                width="370"
-                height="294"
-              />
-            </li>
-            <li class="abaut-img-list-item">
-              <img
-                class="abaut-img-list-img"
-                src="./images/3.jpg"
-                alt="tablet"
-                width="370"
-                height="294"
-              />
-            </li>
+            <div class="aplication">
+              <li class="item">
+                <img
+                  class="abaut-img-list-img"
+                  src="./images/1.jpg"
+                  alt="computer"
+                  width="370"
+                  height="294"
+                />
+              </li>
+              <p class="aplication-text">APLIKACJE KOMPUTEROWE</p>
+            </div>
+            <div class="aplication">
+              <li class="item">
+                <img
+                  class="abaut-img-list-img"
+                  src="./images/2.jpg"
+                  alt="mobilephone"
+                  width="370"
+                  height="294"
+                />
+              </li>
+              <p class="aplication-text">APLIKACJE KOMPUTEROWE</p>
+            </div>
+            <div class="aplication">
+              <li class="item">
+                <img
+                  class="abaut-img-list-img"
+                  src="./images/3.jpg"
+                  alt="tablet"
+                  width="370"
+                  height="294"
+                />
+              </li>
+              <p class="aplication-text">APLIKACJE KOMPUTEROWE</p>
+            </div>
           </ul>
         </div>
       </section>
@@ -323,7 +347,6 @@
           </ul>
         </div>
       </section>
-
       <section class="section our-customers">
         <div class="container">
           <h2 class="secondary-undertitle">Nasi klienci</h2>
@@ -434,5 +457,6 @@
         </div>
       </div>
     </footer>
+    <script src="./js/modal.js"></script>
   </body>
 </html>
