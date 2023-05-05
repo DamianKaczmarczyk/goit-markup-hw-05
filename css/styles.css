@@ -44,7 +44,7 @@ a {
   margin: 0 auto;
 }
 /* ---------- HEADER --------------*/
-.close-black {
+.btn-close {
   position: absolute;
   right: 8px;
   top: 8px;
@@ -52,9 +52,19 @@ a {
   height: 18px;
   border-radius: 50%;
   padding: 6px;
-  display: flex;
-  border: 1px solid rgba(0, 0, 0, 0.1);
   fill: rgba(0, 0, 0, 1);
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.btn-close:hover {
+  fill: var(--main-color);
+  border-color: var(--main-color);
+  transition-property: fill, border-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .img {
   display: block;
@@ -164,12 +174,13 @@ a {
   opacity: 0;
 }
 .backdrop {
-  position: absolute;
+  position: fixed;
   left: 0;
+  right: 0;
   top: 0;
-  width: 100%;
-  height: 100%;
+  bottom: 0;
   background: rgba(0, 0, 0, 0.2);
+  transition: visibility 0.5s linear, opacity 0.5s linear;
 }
 .item {
   position: relative;
@@ -184,9 +195,7 @@ a {
 }
 .aplication > .aplication-text {
   position: absolute;
-  bottom: 0;
-  right: 0;
-  margin: 0;
+  bottom: 7px;
   width: 100%;
   height: 70px;
   padding: 27px;
@@ -413,6 +422,8 @@ a {
     0 1px 1px 0 rgba(0, 0, 0, 0.12);
 }
 .portfolio-list {
+  position: relative;
+  overflow: hidden;
   display: inline-block;
   justify-content: space-between;
   width: 370px;
