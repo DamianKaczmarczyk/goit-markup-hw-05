@@ -140,7 +140,7 @@ a {
   font-weight: 500;
 }
 .mail-list {
-  justify-content: center;
+  display: flex;
   align-items: center;
 }
 .mail-list:hover,
@@ -187,7 +187,6 @@ a {
 }
 .aplication {
   position: relative;
-  margin: 10px;
   overflow: hidden;
   background-color: #fff;
   justify-content: center;
@@ -352,7 +351,6 @@ a {
     url(../images/img-bg.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  padding-top: 200px;
   background-position: center;
 }
 .business-solutions-container {
@@ -367,9 +365,9 @@ a {
   color: var(--focus-color);
   padding: 10px 41px 10px 42px;
   margin-top: 30px;
+  margin-bottom: 200px;
   border-radius: 4px;
   border: none;
-  margin-bottom: 200px;
 }
 .nav-button-card {
   font-family: var(--main-font);
